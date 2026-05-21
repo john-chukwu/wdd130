@@ -1,3 +1,31 @@
+/* CSS Variables */
+:root {
+    --primary-color: #0b3d91;
+    --secondary-color: #f4d35e;
+    --accent1-color: #1d3557;
+    --accent2-color: #a8dadc;
+    --heading-font: "Georgia", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+}
+
+/* Social Media Links */
+.socialmedia a {
+    text-decoration: none;
+}
+
 /* Hero Section */
 .hero {
     position: relative;
