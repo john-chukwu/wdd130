@@ -1,0 +1,42 @@
+/* Hero Section */
+.hero {
+    position: relative;
+}
+
+/* Hero Image */
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Hero Heading Overlay */
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    background-color: rgba(29, 53, 87, 0.8);
+    color: white;
+}
+
+/* Hero Article Overlay */
+.hero article {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(244, 211, 94, 0.9);
+    color: var(--accent1-color);
+    padding: 16px;
+}
+
+/* Article Image */
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 15px;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 10px gray;
+}
