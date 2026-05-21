@@ -19,6 +19,16 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    background-color: var(--accent2-color);
+    /* Added */
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+    /* Added */
 }
 
 /* Social Media Links */
@@ -46,7 +56,8 @@ body {
     padding: 16px;
     text-align: center;
     background-color: rgba(29, 53, 87, 0.8);
-    color: white;
+    color: var(--accent2-color);
+    /* Changed from white */
 }
 
 /* Hero Article Overlay */
@@ -55,7 +66,8 @@ body {
     top: 120px;
     left: 20px;
     right: 20px;
-    background-color: rgba(244, 211, 94, 0.9);
+    background-color: var(--secondary-color);
+    /* Changed */
     color: var(--accent1-color);
     padding: 16px;
 }
