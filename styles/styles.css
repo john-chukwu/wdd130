@@ -1,64 +1,100 @@
-img {
-    width: 100%;
-    height: auto;
+/* =========================
+   GLOBAL / RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Navigation bar */
-nav {
-    background-color: steelblue;
-    padding: 10px;
-}
+/* =========================
+   CENTERED PAGE WIDTH
+========================= */
 
-/* Navigation links */
-nav a {
-    color: white;
-    padding: 20px;
-    display: block;
-    text-decoration: none;
-}
-
-/* Heading */
-h1 {
-    color: steelblue;
-}
-
-main {
+header,
+.grid,
+footer {
     max-width: 840px;
     margin: 0 auto;
 }
 
-/* Profile image in main */
-main img {
-    width: 150px;
-    height: auto;
-    border: 1px solid black;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
-}
+/* =========================
+   NAVIGATION (FLEX)
+========================= */
 
-/* Aside box */
-aside {
-    width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgb(0 0 0 / 0.2);
+nav {
+    background-color: steelblue;
     padding: 1rem;
-    background-color: #eee;
-    color: #333;
-    text-align: center;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-/* Image inside aside */
-aside img {
-    width: 200px;
-    height: auto;
+/* =========================
+   NAV LINKS
+========================= */
+
+nav a {
+    display: block;
+    padding: 0.5rem;
+
+    text-decoration: none;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    color: #fff;
 }
 
-p {
-    padding: 0;
+/* =========================
+   H1 STYLING
+========================= */
+
+h1 {
+    border-bottom: 2px solid steelblue;
+    padding-bottom: 0.5rem;
 }
+
+/* =========================
+   GRID LAYOUT (MAIN + ASIDE)
+========================= */
+
+.grid {
+    display: grid;
+    align-items: center;
+
+    grid-template-columns: 1fr 20rem;
+    gap: 1rem;
+}
+
+/* =========================
+   MAIN AREA
+========================= */
+
+main {
+    grid-column: 1 / 2;
+    margin: 1rem;
+}
+
+/* =========================
+   ASIDE AREA
+========================= */
+
+aside {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    width: 20rem;
+    position: relative;
+}
+
+/* =========================
+   OPTIONAL: FOOTER STYLE
+========================= */
 
 footer {
-    margin-top: 15px;
-    border-top: 1px solid #000;
     text-align: center;
+    padding: 1rem;
 }
