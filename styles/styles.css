@@ -1,100 +1,121 @@
-/* =========================
-   GLOBAL / RESET
-========================= */
+/* =========================================================
+   styles.css - WDD 130 Home Page
+   Author: John Chukwu
+========================================================= */
 
+/* ---------- RESET ---------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =========================
-   CENTERED PAGE WIDTH
-========================= */
-
-header,
-.grid,
-footer {
-    max-width: 840px;
-    margin: 0 auto;
+/* ---------- BODY ---------- */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f5f5f5;
 }
 
-/* =========================
-   NAVIGATION (FLEX)
-========================= */
-
-nav {
-    background-color: steelblue;
+/* ---------- HEADER ---------- */
+header {
+    background-color: #1d3557;
     padding: 1rem;
-
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
 }
 
-/* =========================
-   NAV LINKS
-========================= */
+/* ---------- NAVIGATION ---------- */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
 
 nav a {
-    display: block;
-    padding: 0.5rem;
-
+    color: white;
     text-decoration: none;
-
-    font-size: 1.2rem;
-    font-weight: 700;
-
-    color: #fff;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: 0.3s ease;
 }
 
-/* =========================
-   H1 STYLING
-========================= */
-
-h1 {
-    border-bottom: 2px solid steelblue;
-    padding-bottom: 0.5rem;
+nav a:hover {
+    background-color: #457b9d;
 }
 
-/* =========================
-   GRID LAYOUT (MAIN + ASIDE)
-========================= */
-
+/* ---------- GRID LAYOUT ---------- */
 .grid {
     display: grid;
-    align-items: center;
-
-    grid-template-columns: 1fr 20rem;
-    gap: 1rem;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-/* =========================
-   MAIN AREA
-========================= */
-
+/* ---------- MAIN ---------- */
 main {
-    grid-column: 1 / 2;
-    margin: 1rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
 }
 
-/* =========================
-   ASIDE AREA
-========================= */
+main h1 {
+    margin-bottom: 1rem;
+    color: #1d3557;
+}
 
+main img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* ---------- ASIDE ---------- */
 aside {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-
-    width: 20rem;
-    position: relative;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
-/* =========================
-   OPTIONAL: FOOTER STYLE
-========================= */
+aside h2 {
+    margin-bottom: 1rem;
+    color: #1d3557;
+}
 
+aside img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* ---------- FOOTER ---------- */
 footer {
     text-align: center;
     padding: 1rem;
+    background-color: #1d3557;
+    color: white;
+    margin-top: 2rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main img {
+        width: 100%;
+    }
 }

@@ -1,82 +1,347 @@
-/* CSS Variables */
-:root {
-    --primary-color: #0b3d91;
-    --secondary-color: #f4d35e;
-    --accent1-color: #1d3557;
-    --accent2-color: #a8dadc;
-    --heading-font: "Georgia", serif;
-    --body-font: Arial, Helvetica, sans-serif;
-}
+/* =========================================================
+   RAFTING.CSS
+   WDD 130 - Week 04 About Us Page Styling
+========================================================= */
 
-/* Universal Reset */
+/* ---------- CSS RESET ---------- */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
+/* ---------- ROOT VARIABLES ---------- */
+
+:root {
+    --primary-color: #6c5ce7;
+    --secondary-color: #f4f4f4;
+    --accent-color: #222222;
+    --heading-color: #1d3557;
+
+    --heading-font: Georgia, serif;
+    --body-font: Arial, sans-serif;
+}
+
+/* ---------- BODY ---------- */
+
 body {
     font-family: var(--body-font);
-    color: var(--accent1-color);
-    background-color: var(--accent2-color);
-    /* Added */
+    color: var(--accent-color);
+    background-color: #ffffff;
+    line-height: 1.6;
 }
 
-/* Headings */
-h1,
-h2,
-h3 {
-    font-family: var(--heading-font);
-    /* Added */
+/* ---------- PAGE WIDTH ---------- */
+
+header,
+main,
+footer {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/* Social Media Links */
-.socialmedia a {
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    align-items: center;
+
+    background-color: #d9ccff;
+
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+}
+
+/* ---------- LOGO ---------- */
+
+header img {
+    width: 140px;
+    height: auto;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+}
+
+/* ---------- NAV LINKS ---------- */
+
+nav a {
     text-decoration: none;
+    color: black;
+
+    background-color: white;
+
+    padding: 0.7rem 1.2rem;
+
+    border: 1px solid #777;
+
+    font-weight: bold;
+    font-size: 1rem;
+
+    transition: 0.3s ease;
 }
 
-/* Hero Section */
+/* ---------- NAV HOVER ---------- */
+
+nav a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
 .hero {
     position: relative;
 }
 
-/* Hero Image */
-.hero img {
+/* ---------- HERO IMAGE ---------- */
+
+.hero > img {
     display: block;
     width: 100%;
     height: auto;
 }
 
-/* Hero Heading Overlay */
+/* ---------- HERO HEADING ---------- */
+
 .hero h1 {
     position: absolute;
+
     top: 20px;
     width: 100%;
-    padding: 16px;
+
     text-align: center;
-    background-color: rgba(29, 53, 87, 0.8);
-    color: var(--accent2-color);
-    /* Changed from white */
+
+    color: white;
+
+    background-color: rgba(0, 0, 0, 0.55);
+
+    padding: 1rem;
+
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
 }
 
-/* Hero Article Overlay */
+/* ---------- HERO ARTICLE ---------- */
+
 .hero article {
     position: absolute;
-    top: 120px;
-    left: 20px;
-    right: 20px;
-    background-color: var(--secondary-color);
-    /* Changed */
-    color: var(--accent1-color);
-    padding: 16px;
+
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+
+    background-color: rgba(255, 255, 255, 0.85);
+
+    padding: 1rem;
+
+    border: 1px solid #ccc;
 }
 
-/* Article Image */
+/* ---------- ARTICLE IMAGE ---------- */
+
 .hero article img {
     float: right;
-    width: 125px;
-    margin-left: 15px;
-    border: 2px solid var(--primary-color);
-    box-shadow: 0 0 10px gray;
+
+    width: 140px;
+    height: auto;
+
+    margin-left: 1rem;
+
+    border: 2px solid #999;
+}
+
+/* =========================================================
+   HISTORY SECTION
+========================================================= */
+
+.history {
+    padding: 2rem;
+    background-color: #f8f8f8;
+}
+
+/* ---------- HISTORY HEADING ---------- */
+
+.history h2 {
+    text-align: center;
+
+    font-size: 2rem;
+
+    color: var(--heading-color);
+
+    margin-bottom: 1.5rem;
+}
+
+/* ---------- HISTORY GRID ---------- */
+
+.history-content {
+    display: grid;
+
+    grid-template-columns: 1fr 220px 1fr;
+
+    align-items: center;
+
+    gap: 1.5rem;
+}
+
+/* ---------- HISTORY IMAGE ---------- */
+
+.history-content img {
+    width: 100%;
+    height: auto;
+}
+
+/* =========================================================
+   ADVENTURES SECTION
+========================================================= */
+
+.adventures {
+    padding: 2rem;
+}
+
+/* ---------- ADVENTURE HEADING ---------- */
+
+.adventures h2 {
+    text-align: center;
+
+    font-size: 2rem;
+
+    color: var(--heading-color);
+
+    margin-bottom: 2rem;
+}
+
+/* ---------- ADVENTURE FLEX LAYOUT ---------- */
+.adventure-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.adventure-gallery figure {
+    margin: 0;
+    width: 150px;
+    flex: 0 0 150px;
+    text-align: center;
+}
+
+.adventure-gallery img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ---------- FIGCAPTION ---------- */
+
+figcaption {
+    margin-top: 0.5rem;
+
+    font-size: 0.9rem;
+
+    font-weight: bold;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background-color: #d9ccff;
+
+    padding: 1rem 2rem;
+
+    margin-top: 2rem;
+}
+
+/* ---------- FOOTER TEXT ---------- */
+
+footer p {
+    font-size: 1rem;
+}
+
+/* ---------- SOCIAL MEDIA ---------- */
+
+.socialmedia {
+    display: flex;
+
+    gap: 1rem;
+}
+
+/* ---------- SOCIAL ICONS ---------- */
+
+.socialmedia img {
+    width: 40px;
+    height: auto;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .history-content {
+        grid-template-columns: 1fr;
+    }
+
+    .adventure-gallery {
+        flex-direction: column;
+    }
+
+    .hero article {
+        position: static;
+        margin-top: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
 }
